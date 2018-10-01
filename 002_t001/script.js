@@ -21,21 +21,10 @@ module.exports = {
 
 				xlsArray[i]=JSON.parse(fs.readFileSync (fullFileName));
 				console.log(xlsArray[i]);
-				/*
-				fs.readFile (fullFileName, function (err, data) {
-					if (err) throw err; 
-					xlsArray[i]=JSON.parse(data);
-					console.log(xlsArray[i]);
-				} );
-				*/
-			}
+							}
 			var xls = json2xls(xlsArray);
 			fs.writeFileSync(pathXLS, xls, 'binary');
 		} );
-
-
-	
-		return true;
 	},
 
 
